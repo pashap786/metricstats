@@ -46,6 +46,10 @@ public class InitialData {
 		m.setDecimalValue(30000.00);
 		ms.add(m);
 		
+		m.setName("BTC");
+		m.setDecimalValue(32000.00);
+		ms.add(m);
+		
 		metricRepo.saveAll(ms);
 		
 		List<Metric> mets = metricRepo.findAll();

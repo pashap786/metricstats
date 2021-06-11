@@ -16,7 +16,7 @@ import lombok.Setter;
 @Setter
 @Entity
 @Table(name = "metric")
-public class Metric {
+public class Metric implements Comparable<Metric> {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
@@ -25,5 +25,11 @@ public class Metric {
 	private String name;
 	@Column(name = "value_decimal")
 	private Double decimalValue;
+
+
+	@Override
+	public int compareTo(Metric o) {
+		return this.getDecimalValue().compareTo(o.getDecimalValue());
+	}
 
 }
