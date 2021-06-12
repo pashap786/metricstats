@@ -14,7 +14,14 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 @Service
 public class MetricProcessor {
-
+	/*
+	 * Big O
+	 * Sort is performed once on a given data set.
+	 * sum is performed once
+	 * still just n
+	 * O(2n)
+	 * not sure how to include the reduction based on removing zeros.
+	 */
 	public Statistics populateStats(List<Metric> metrics) {
 		
 		if(metrics.isEmpty()) {
